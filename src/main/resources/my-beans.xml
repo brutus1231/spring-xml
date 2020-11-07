@@ -8,4 +8,15 @@
     <bean id="message2" class="pl.sda.ExtraMessage" scope="prototype" >
         <property name="text" value = "extra"/>
     </bean>
+
+    <bean id="person" class="pl.sda.Person">
+        <property name="firstName" value="Marcin" />
+        <property name="lastName" value="Kowalski" />
+    </bean>
+
+    <bean id="student" class="pl.sda.Student">
+        <property name="firstName" value="#{person.firstName}" />
+        <property name="lastName" value="#{person.lastName}" />
+        <property name="schoolName" value="Oxford" />
+    </bean>
 </beans>
